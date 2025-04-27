@@ -1,59 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Philosophy Academy</title>
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Crimson+Pro&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophia Arcana</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+SC:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">Philosophia</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="philosophers.html">Philosophers</a></li>
-        <li><a href="videos.html">Videos</a></li>
-      </ul>
-    </div>
-  </nav>
+    <header class="scroll-header">
+        <nav class="ancient-nav">
+            <div class="nav-logo">
+                <span class="logo-symbol">Φ</span>
+                <h1>PHILOSOPHIA ARCANUM</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#introduction">Essence</a></li>
+                <li><a href="#history">Chronicles</a></li>
+                <li><a href="#schools">Schools</a></li>
+                <li><a href="books.html">Tomes</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <h1>The Journey to Wisdom Begins Here</h1>
-      <p>Explore curated philosophy resources from ancient to modern thinkers</p>
-      <a href="#content" class="cta-button">Start Learning</a>
-    </div>
-  </header>
+    <main class="parchment-container">
+        <!-- Introduction Section -->
+        <section id="introduction" class="philosophy-scroll">
+            <article class="ancient-text">
+                <h2 class="section-title">The Essence of Philosophy</h2>
+                <div class="decorative-border"></div>
+                <p class="drop-cap">In the hallowed halls of human thought, philosophy emerges as the eternal flame illuminating the labyrinth of existence. More than mere intellectual exercise, it is the soul's compass in its quest for truth...</p>
+                
+                <div class="illuminated-quote">
+                    <blockquote>
+                        "Philosophy is the silent dialogue between the soul and eternity"
+                        <cite>- An Ancient Parable</cite>
+                    </blockquote>
+                </div>
+            </article>
+        </section>
 
-  <!-- Main Content -->
-  <main id="content" class="container">
-    <section class="featured-section">
-      <h2>Weekly Featured Philosopher</h2>
-      <div class="philosopher-card">
-        <img src="assets/images/socrates.jpg" alt="Socrates">
-        <div class="card-content">
-          <h3>Socrates</h3>
-          <p>"The only true wisdom is in knowing you know nothing."</p>
-          <a href="#" class="learn-more">Explore Teachings →</a>
-        </div>
-      </div>
-    </section>
-  </main>
+        <!-- History Timeline -->
+        <section id="history" class="timewheel-section">
+            <h2 class="section-title">Chronicles of Wisdom</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>6th Century BCE</h3>
+                        <p>The first philosophers in Miletus question the arche...</p>
+                    </div>
+                </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Philosophia. All rights reserved.</p>
-    </div>
-  </footer>
+                <!-- Add more timeline items here -->
+            </div>
+        </section>
 
-  <script src="scripts/app.js"></script>
+        <!-- Philosophy Schools Tabs -->
+        <section id="schools" class="schools-section">
+            <div class="school-tabs">
+                <button class="tab-button active" onclick="openSchool(event, 'continental')">Continental Tradition</button>
+                <button class="tab-button" onclick="openSchool(event, 'analytic')">Analytic Tradition</button>
+            </div>
+
+            <div id="continental" class="tab-content active">
+                <h3>The Continental Path</h3>
+                <p>Emerging from the European mainland, this tradition embraces...</p>
+            </div>
+
+            <div id="analytic" class="tab-content">
+                <h3>The Analytic Method</h3>
+                <p>Born in the early 20th century, this Anglo-American approach...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>

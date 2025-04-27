@@ -1,235 +1,118 @@
-/* Navigation */
-.navbar {
-    background: white;
-    padding: 1rem 0;
-    box-shadow: var(--shadow);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .logo {
-    font-family: 'Crimson Pro', serif;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 700;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
+:root {
+    --primary-color: #3a1a1a;    /* Deep wine red */
+    --secondary-color: #5a2a2a;  /* Aged parchment dark */
+    --accent-gold: #c5a880;      /* Antique gold */
+    --text-color: #e0d4c3;       /* Aged paper */
+    --font-heading: 'UnifrakturMaguntia', cursive;
+    --font-body: 'Cormorant SC', serif;
+}
+
+body {
+    background: var(--primary-color);
     color: var(--text-color);
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: var(--secondary-color);
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 8rem 0;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: var(--accent-color);
-    color: white;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    margin-top: 2rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    transform: translateY(-3px);
-  }
-  
-  /* Philosopher Card */
-  .philosopher-card {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    margin: 2rem 0;
-  }
-  
-  .philosopher-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .card-content {
-    padding: 2rem;
-  }
-  
-  .card-content h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-  }
-  
-  .learn-more {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .philosopher-card {
-      grid-template-columns: 1fr;
-    }
-    
-    .hero h1 {
-      font-size: 2rem;
-    }
-  }
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
 
-
-  /* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .featured-section {
-    animation: fadeIn 1s ease-out;
-  }
-
-
-  /* Books Page */
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .book-card {
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    padding: 1.5rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .book-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .book-cover img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-  }
-  
-  .author {
-    color: var(--secondary-color);
-    margin: 0.5rem 0;
-  }
-  
-  /* Philosophers Page */
-  .philosopher-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  }
-  
-  .philosopher-details {
-    padding: 1.5rem;
-  }
-  
-  .era {
-    color: var(--accent-color);
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  
-  /* Videos Page */
-  .channel-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-  
-  .channel-card {
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-  }
-  
-  .channel-header {
+.ancient-nav {
+    background: var(--secondary-color);
     padding: 1rem;
-    text-align: center;
-    background: var(--bg-light);
-  }
-  
-  .channel-header img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
-  
-  .video-wrapper {
-    margin: 3rem 0;
-    background: white;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-  }
-  
-  /* Filter/Search */
-  .filter-bar {
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+.nav-logo {
     display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-symbol {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--accent-gold);
+}
+
+.philosophy-scroll {
+    background: linear-gradient(to right, #2e1818 0%, #3a1a1a 100%);
+    padding: 2rem;
+    margin: 2rem auto;
+    border: 2px solid var(--accent-gold);
+    position: relative;
+    max-width: 800px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.decorative-border {
+    height: 4px;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        var(--accent-gold) 10px,
+        var(--accent-gold) 20px
+    );
+    margin: 1.5rem 0;
+}
+
+.drop-cap::first-letter {
+    font-family: var(--font-heading);
+    float: left;
+    font-size: 4.5rem;
+    line-height: 0.8;
+    margin: 0.15em 0.1em 0 0;
+}
+
+.illuminated-quote {
+    border-left: 3px solid var(--accent-gold);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+}
+
+.illuminated-quote blockquote {
+    font-style: italic;
+    position: relative;
+    padding-left: 1rem;
+}
+
+/* Timeline Styling */
+.timeline-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: var(--accent-gold);
+    height: 100%;
+}
+
+/* Tab System */
+.school-tabs {
+    display: flex;
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
-  }
-  
-  .filter-btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    background: var(--bg-light);
-    border-radius: 20px;
+}
+
+.tab-button {
+    background: transparent;
+    border: 2px solid var(--accent-gold);
+    color: var(--text-color);
+    padding: 1rem 2rem;
     cursor: pointer;
-  }
-  
-  .filter-btn.active {
-    background: var(--secondary-color);
-    color: white;
-  }
-  
-  .search-bar {
-    margin: 2rem 0;
-  }
-  
-  #searchInput {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-  }
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background: var(--accent-gold);
+    color: var(--primary-color);
+}
