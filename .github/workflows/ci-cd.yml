@@ -1,17 +1,11 @@
-name: Philosophy Site CI/CD
+name: Build Only
 
-on:
-  push:
-    branches: [ "master" ]
+on: push
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Build Site
-      run: |
-        mkdir -p dist
-        cp -r src/* dist/
-        echo "Simple build complete!"
+      - uses: actions/checkout@v4
+      - run: mkdir -p dist && cp -r src/* dist/
+      - run: echo "Build succeeded" >> dist/build.log
